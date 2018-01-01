@@ -1,0 +1,97 @@
+﻿<Window x:Class="WindowBeginningEduGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowBeginningEduGame"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        x:Name="AppWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\Images\education.png"
+        Title="Learning is fun" ResizeMode="NoResize" Height="700" Width="900">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        
+                        <!-- Outer border with the dropshadow margin-->
+                        <Border Padding="{Binding WindowViewModel.OuterMarginSizeThickness, FallbackValue= 10}">
+                            <!-- Main Window outline -->
+                            <Grid>                                
+                                <!-- Window border and drop shadow -->
+                                <Border CornerRadius="{Binding WindowViewModel.WindowCornerRadius , FallbackValue=10}"
+                                        Background="{Binding WindowViewModel.ForegroundLightBrush , FallbackValue=White}" >
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2"/>
+                                    </Border.Effect>
+                                </Border>
+                                
+                                <!-- The Main window content -->
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <!-- Title Bar -->
+                                        <RowDefinition Height="{Binding TitleHightGridLength, FallbackValue= 30}"/>
+                                        <!-- Window Content -->
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                        
+                                        <!-- Title Bar -->
+                                    <Grid Grid.Column="0" Panel.ZIndex="1">
+                                        <Grid.ColumnDefinitions>
+                                            <!-- Icon -->
+                                            <ColumnDefinition Width="Auto"/>
+                                            <!-- Title -->
+                                            <ColumnDefinition Width="*"/>
+                                            <!-- Windows Button -->
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- Icon -->
+                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
+                                            <Image Source="C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\Images\education.png"/>
+                                        </Button>
+
+                                        <!-- Title -->
+                                        <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="0">
+                                            <Image Source="C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\Images\Learn.png"/>
+                                        </Viewbox>
+
+                                        <!-- Windows Buttons-->
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Button Style="{StaticResource WindowControlButton}"  Content="_" Command="{Binding MinimizeCommand}"/>
+                                            <Button Style="{StaticResource WindowControlButton}"  Content="[ ]" Command="{Binding MaximizeCommand}"/>
+                                            <Button Style="{StaticResource CloseButtonStyle}" Margin="0 0 10 0" Content="X" Command="{Binding CloseCommand}"/>
+                                        </StackPanel>
+                                    </Grid>
+    
+                                        <!-- Page Content -->
+                                    <Border Grid.Row="1" Padding="{Binding InnerContentPaddingThickness}">
+                                        <!-- Map template to the actual content -->
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>                                    
+                                        
+                                    </Border>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="{Binding ResizeBorderThickness}"
+                      CaptionHeight="{Binding TitleHeight}"
+                      GlassFrameThickness="0"
+                      />
+    </WindowChrome.WindowChrome>
+    
+    <Grid Background="{StaticResource ForegroundLightBrush}">
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" />
+    </Grid>
+</Window>
