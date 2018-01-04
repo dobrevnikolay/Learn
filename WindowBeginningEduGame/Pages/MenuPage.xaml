@@ -1,0 +1,60 @@
+﻿<Page x:Class="WindowBeginningEduGame.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowBeginningEduGame"
+      mc:Ignorable="d" 
+      x:Name="Page"
+      d:DesignHeight="700" d:DesignWidth="900"
+      Title="MenuPage">
+
+
+    <Border Background="{StaticResource EduGameGreenBrush}">
+        <Grid>
+            <!-- Green board as background image -->
+            <Grid.Background>
+                <ImageBrush TileMode="Tile" ViewportUnits="RelativeToBoundingBox" ImageSource="C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\Images\MenuBackground.png"/>
+            </Grid.Background>
+
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width ="1*"/>
+                        <ColumnDefinition Width ="6.7*"/>
+                        <ColumnDefinition Width ="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1" Margin="0 50 0 50">
+                        <Grid>
+                            <!-- TODO: Check 10th tutorial for Lists-->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <Button Grid.Column="0" Content="Astronomy"/>
+                                <Button Grid.Column="0" Content="Astronomy"/>
+                                <Button Grid.Column="0" Content="Astronomy"/>
+                                <Button Grid.Column="0" Content="Astronomy"/>
+                                <Button Grid.Column="0" Content="Astronomy"/>
+                                <Button Grid.Column="0" Content="Astronomy"/>
+                                <Button Grid.Column="0" Content="Astronomy"/>
+                   
+                                
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <Button Grid.Column="1" Style="{StaticResource Hoverless}">                                                                          
+                                        <Image Source="C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\Images\astro.png"/>
+                                </Button>
+                            </StackPanel>
+
+                        </Grid>
+                    </Border>
+                </Grid>    
+                
+            </StackPanel>
+            
+        </Grid>
+    </Border>
+</Page>

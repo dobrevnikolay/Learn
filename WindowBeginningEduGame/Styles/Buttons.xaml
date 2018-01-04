@@ -35,7 +35,8 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Padding" Value="8"/>
         <Setter Property="Foreground" Value="{StaticResource ForegroundMainBrush}"/>
-
+        <Setter Property="FontFamily" Value="{StaticResource LatoBold}"/>
+        
         <Setter Property="LayoutTransform">
             <Setter.Value>
                 <ScaleTransform ScaleX="1.5"/>
@@ -97,9 +98,22 @@
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource EduGameGreenBrush}"/>
-                        </Trigger>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource EduGameGreen}" Duration="0:0:0.4"
+                                                    Storyboard.TargetName="border" Storyboard.TargetProperty="Background.Color"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource EduGameOrange}" Duration="0:0:0.4"
+                                                    Storyboard.TargetName="border" Storyboard.TargetProperty="Background.Color"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Background" TargetName="border" Value="{StaticResource ForegroundDarkBrush}"/>
                         </Trigger>
@@ -138,9 +152,22 @@
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="{StaticResource EduGameOrangeBrush}"/>
-                        </Trigger>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource EduGameOrange}" Duration="0:0:0.4"
+                                                   Storyboard.TargetProperty="Foreground.Color"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="{StaticResource ForegroundLight}" Duration="0:0:0.4"
+                                                    Storyboard.TargetProperty="Foreground.Color"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}"/>
                         </Trigger>
@@ -150,4 +177,21 @@
         </Setter>
     </Style>
 
+    <!-- Attempt to fade the button -->
+    <Style TargetType="{x:Type Button}" x:Key="fade">
+        <Setter Property="Visibility" Value="Hidden"/>
+        <Style.Triggers>
+            <Trigger Property="Visibility" Value="Visible">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                             From="0.0" To="1.0" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
 </ResourceDictionary>

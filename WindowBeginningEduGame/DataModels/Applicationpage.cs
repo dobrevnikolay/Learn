@@ -17,8 +17,8 @@ namespace WindowBeginningEduGame
         Login = 0,
 
         /// <summary>
-        /// The main page of the application (PlayGround)
+        /// The menu page of the application (PlayGround)
         /// </summary>
-        MainPage = 1,
+        MenuPage = 1,
     }
 }

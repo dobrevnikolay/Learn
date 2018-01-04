@@ -19,7 +19,8 @@ namespace WindowBeginningEduGame
             {
                 case ApplicationPage.Login:
                     return new LoginPage();
-                case ApplicationPage.MainPage:
+                case ApplicationPage.MenuPage:
+                    return new MenuPage();
                 default:
                     Debugger.Break();
                     return null;

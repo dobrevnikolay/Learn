@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WindowBeginningEduGame"
       mc:Ignorable="d" 
+      x:Name="Page"
       d:DesignHeight="700" d:DesignWidth="900"
       Title="LoginPage">
 
@@ -13,7 +14,7 @@
         <Grid>
             <!-- Green board as background image -->
             <Grid.Background>
-                <ImageBrush TileMode="Tile" ViewportUnits="RelativeToBoundingBox" ImageSource="C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\Images\background.jpg"/>
+                <ImageBrush TileMode="Tile" ViewportUnits="RelativeToBoundingBox" ImageSource="C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\Images\MenuBackground.png"/>
             </Grid.Background>
 
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
@@ -36,11 +37,11 @@
                                 Foreground="{StaticResource ForegroundDarkBrush}"/>
 
                         <!-- Email -->
-                        <TextBox Tag="Email"/>
+                        <TextBox Tag="Email" Text="{Binding Email}"/>
                         <!-- Password -->
-                        <PasswordBox Tag="Password"/>
+                        <PasswordBox x:Name="PasswordText" Tag="Password"/>
 
-                        <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Center"/>
+                        <Button x:Name="RegisterButton" Command="{Binding RegistrationCommand}" CommandParameter="{Binding ElementName=Page}" Content="Register" HorizontalAlignment="Center"/>
 
                     </StackPanel>
                 </Border>
