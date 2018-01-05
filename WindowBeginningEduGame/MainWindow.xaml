@@ -9,7 +9,7 @@
         AllowsTransparency="True"
         x:Name="AppWindow"
         WindowStartupLocation="CenterScreen"
-        Icon="C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\Images\education.png"
+        Icon="/Images/education.png"
         Title="Learning is fun" ResizeMode="NoResize" Height="700" Width="900">
 
     <Window.Resources>
@@ -52,12 +52,12 @@
 
                                         <!-- Icon -->
                                         <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
-                                            <Image Source="C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\Images\education.png"/>
+                                            <Image Source="/Images\education.png"/>
                                         </Button>
 
                                         <!-- Title -->
                                         <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="0">
-                                            <Image Source="C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\Images\Learn.png"/>
+                                            <Image Source="/Images/Learn.png"/>
                                         </Viewbox>
 
                                         <!-- Windows Buttons-->

@@ -14,7 +14,7 @@
         <Grid>
             <!-- Green board as background image -->
             <Grid.Background>
-                <ImageBrush TileMode="Tile" ViewportUnits="RelativeToBoundingBox" ImageSource="C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\Images\MenuBackground.png"/>
+                <ImageBrush TileMode="Tile" ViewportUnits="RelativeToBoundingBox" ImageSource="/Images/background.jpg"/>
             </Grid.Background>
 
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
@@ -27,7 +27,7 @@
                         Margin="50 0 50 0">
                     <StackPanel>
                         <!-- Sign up -->
-                        <TextBlock Text="Sign Up" FontSize="{StaticResource FontSizeLarge}"
+                        <TextBlock Text="Sign Up" FontSize="{StaticResource FontSizeBig}"
                                 FontFamily="{StaticResource LatoRegular}"
                                 Foreground="{StaticResource EduGameGreenBrush}"/>
 

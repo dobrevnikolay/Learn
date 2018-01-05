@@ -13,7 +13,7 @@
     <!-- Default TextBox style -->
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="BorderBrush" Value="{StaticResource EduGameGreenBrush}"/>
-        <Setter Property="FontSize" Value="{StaticResource FontSizeLarge}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBig}"/>
         <Setter Property="Margin" Value="0 5 0 5"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="BorderThickness" Value="0 0 0 1"/>
@@ -75,7 +75,7 @@
     <!-- Style for the PasswordBox in the Login form-->
     <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="BorderBrush" Value="{StaticResource EduGameGreenBrush}"/>
-        <Setter Property="FontSize" Value="{StaticResource FontSizeLarge}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBig}"/>
         <Setter Property="Margin" Value="0 5 0 5"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="BorderThickness" Value="0 0 0 1"/>

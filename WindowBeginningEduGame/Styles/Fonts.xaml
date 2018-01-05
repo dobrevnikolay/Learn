@@ -6,7 +6,10 @@
     
     <FontFamily x:Key="LatoRegular">pack://appliction;,,,/Fonts/#Lato Regular</FontFamily>
     <FontFamily x:Key="LatoThin">pack://appliction;,,,/Fonts/#Lato Thin</FontFamily>
+    <FontFamily x:Key="FontForTopicTitle">pack://appliction;,,,/Fonts/#Lato Semibold Italic</FontFamily>
     <FontFamily x:Key="LatoBold">pack://appliction;,,,/Fonts/#Lato Bold</FontFamily>
+    <FontFamily x:Key="FontAwesome">pack://appliction;,,,/Fonts/#FontAwesome</FontFamily>
+    
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource LatoThin}"/>
@@ -22,7 +25,14 @@
     <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}"/>
 
     <system:Double x:Key="FontSizeRegular">20</system:Double>
-    <system:Double x:Key="FontSizeSmall">14</system:Double>
-    <system:Double x:Key="FontSizeLarge">30</system:Double>
+    <system:Double x:Key="FontSizeSmall">15</system:Double>
+    <system:Double x:Key="FontSizeBig">30</system:Double>
+    <system:Double x:Key="FontSizeLarge">50</system:Double>
+    <system:Double x:Key="FontSizeIconLarge">70</system:Double>
+    
+    
+    <!-- Special characters from AwesomeFonst -->
+    <system:String x:Key="AwesomeFontGearCircle">&#xf085;</system:String>
+    <system:String x:Key="AwesomeFontUser">&#xf2bd;</system:String>
 
 </ResourceDictionary>

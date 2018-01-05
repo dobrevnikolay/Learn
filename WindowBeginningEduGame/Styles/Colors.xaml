@@ -29,4 +29,8 @@
     <Color x:Key="EduGameOrange">#ffa800</Color>
     <SolidColorBrush x:Key="EduGameOrangeBrush" Color="{StaticResource EduGameOrange}" />
 
+    <Color x:Key="TopicPickerColor">#86ff6b</Color>
+    <SolidColorBrush x:Key="TopicPickerColorBrush" Color="{StaticResource TopicPickerColor}" />
+    
+
 </ResourceDictionary>

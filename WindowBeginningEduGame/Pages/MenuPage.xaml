@@ -14,7 +14,7 @@
         <Grid>
             <!-- Green board as background image -->
             <Grid.Background>
-                <ImageBrush TileMode="Tile" ViewportUnits="RelativeToBoundingBox" ImageSource="C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\Images\MenuBackground.png"/>
+                <ImageBrush TileMode="Tile" ViewportUnits="RelativeToBoundingBox" ImageSource="/Images/MenuBackground.png"/>
             </Grid.Background>
 
             <StackPanel>
@@ -24,8 +24,32 @@
                         <ColumnDefinition Width ="6.7*"/>
                         <ColumnDefinition Width ="*"/>
                     </Grid.ColumnDefinitions>
+                    
+                    <!-- User Data -->
+                    <StackPanel Grid.Column="0">
+                        
+                        <!-- Button with additional info
+                         (stores user's email and answered topics so far) -->
 
-                    <Border Grid.Column="1" Margin="0 50 0 50">
+                        <Button Style="{StaticResource IconGrowButton}" Content="{StaticResource AwesomeFontUser}"/>
+
+
+                        <!-- User's email -->
+                        <!--<TextBlock FontFamily="{StaticResource LatoRegular}" 
+                               FontSize="{StaticResource FontSizeRegular}" 
+                               Margin="5 10 5 0" 
+                               Foreground="{StaticResource ForegroundLightBrush}"
+                               Text="user: "/>
+                        --><!-- User's answered topics so far --><!--
+                        <TextBlock FontFamily="{StaticResource LatoRegular}" 
+                               FontSize="{StaticResource FontSizeRegular}" 
+                               Margin="5 2 5 5"
+                               Foreground="{StaticResource ForegroundLightBrush}"
+                               Text="Answered Topics: "/>-->
+                    </StackPanel>
+                    
+                    <!-- Available topics -->
+                    <Border Grid.Column="1" Margin="0 20 0 50">
                         <Grid>
                             <!-- TODO: Check 10th tutorial for Lists-->
                             <Grid.ColumnDefinitions>
@@ -33,24 +57,40 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0">
-                                <Button Grid.Column="0" Content="Astronomy"/>
-                                <Button Grid.Column="0" Content="Astronomy"/>
-                                <Button Grid.Column="0" Content="Astronomy"/>
-                                <Button Grid.Column="0" Content="Astronomy"/>
-                                <Button Grid.Column="0" Content="Astronomy"/>
-                                <Button Grid.Column="0" Content="Astronomy"/>
-                                <Button Grid.Column="0" Content="Astronomy"/>
-                   
-                                
+                                <Button  Content="Astronomy" Style="{StaticResource ImageButtonStyle}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Images/astro.jpg"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button  Content="Movies" Style="{StaticResource ImageButtonStyle}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Images/movie.jpg"/>
+                                    </Button.Background>
+                                </Button>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
-                                <Button Grid.Column="1" Style="{StaticResource Hoverless}">                                                                          
-                                        <Image Source="C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\Images\astro.png"/>
+
+                                <Button  Content="Geography" Style="{StaticResource ImageButtonStyle}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Images/geog.jpg"/>
+                                    </Button.Background>
+                                </Button>
+
+                                <Button  Content="Books" Style="{StaticResource ImageButtonStyle}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Images/book.jpg"/>
+                                    </Button.Background>
                                 </Button>
                             </StackPanel>
 
                         </Grid>
                     </Border>
+
+                    <!-- Options -->
+                    <StackPanel Grid.Column="2">
+                        <Button Style="{StaticResource IconGrowButton}" Content="{StaticResource AwesomeFontGearCircle}"/>
+                    </StackPanel>
+                    
                 </Grid>    
                 
             </StackPanel>
