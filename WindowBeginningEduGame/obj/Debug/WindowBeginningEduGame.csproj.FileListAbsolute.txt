@@ -33,6 +33,7 @@ C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\Microsoft.Wi
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\PropertyChanged.dll
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\Microsoft.Windows.Shell.pdb
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\PropertyChanged.xml
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\TopicMenu.g.cs
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\MainWindow.g.cs
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Pages\MenuPage.g.cs
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Pages\LoginPage.g.cs
@@ -41,6 +42,7 @@ C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\GeneratedInt
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame_MarkupCompile.cache
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame_MarkupCompile.lref
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\App.baml
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\TopicMenu.baml
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\MainWindow.baml
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Pages\MenuPage.baml
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Pages\LoginPage.baml
@@ -55,3 +57,4 @@ C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginn
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.csproj.CoreCompileInputs.cache
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.exe
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.pdb
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.csprojResolveAssemblyReference.cache

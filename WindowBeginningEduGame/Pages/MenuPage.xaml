@@ -49,42 +49,9 @@
                     </StackPanel>
                     
                     <!-- Available topics -->
-                    <Border Grid.Column="1" Margin="0 20 0 50">
-                        <Grid>
-                            <!-- TODO: Check 10th tutorial for Lists-->
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Grid.Column="0">
-                                <Button  Content="Astronomy" Style="{StaticResource ImageButtonStyle}">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/Images/astro.jpg"/>
-                                    </Button.Background>
-                                </Button>
-                                <Button  Content="Movies" Style="{StaticResource ImageButtonStyle}">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/Images/movie.jpg"/>
-                                    </Button.Background>
-                                </Button>
-                            </StackPanel>
-                            <StackPanel Grid.Column="1">
 
-                                <Button  Content="Geography" Style="{StaticResource ImageButtonStyle}">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/Images/geog.jpg"/>
-                                    </Button.Background>
-                                </Button>
+                    <local:TopicMenu Grid.Column="1"/>
 
-                                <Button  Content="Books" Style="{StaticResource ImageButtonStyle}">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/Images/book.jpg"/>
-                                    </Button.Background>
-                                </Button>
-                            </StackPanel>
-
-                        </Grid>
-                    </Border>
 
                     <!-- Options -->
                     <StackPanel Grid.Column="2">

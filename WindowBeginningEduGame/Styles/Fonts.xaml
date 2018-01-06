@@ -28,7 +28,7 @@
     <system:Double x:Key="FontSizeSmall">15</system:Double>
     <system:Double x:Key="FontSizeBig">30</system:Double>
     <system:Double x:Key="FontSizeLarge">50</system:Double>
-    <system:Double x:Key="FontSizeIconLarge">70</system:Double>
+    <system:Double x:Key="FontSizeIconLarge">60</system:Double>
     
     
     <!-- Special characters from AwesomeFonst -->

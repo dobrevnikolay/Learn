@@ -78,8 +78,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AttachedProperties\PasswordBoxProperties.cs" />
+    <Compile Include="Controls\TopicMenu.xaml.cs">
+      <DependentUpon>TopicMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataModels\ApplicationPage.cs" />
+    <Compile Include="DataModels\DesignTimeMock.cs" />
     <Compile Include="DataModels\TopicButton.cs" />
+    <Compile Include="DataModels\TopicQuestions.cs" />
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
@@ -94,8 +99,12 @@
     <Compile Include="ViewModel\Base\RelayParameterizedCommand.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
-    <Compile Include="ViewModel\MenuViewModel.cs" />
+    <Compile Include="ViewModel\TopicListViewModel.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
+    <Page Include="Controls\TopicMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -212,9 +221,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\astro.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\geo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\geog.jpg" />

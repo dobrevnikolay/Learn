@@ -2,6 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:WindowBeginningEduGame">
 
+
+
+    <Color x:Key="WindowButtonsColorLight">#d6d1d1</Color>
+    <SolidColorBrush x:Key="WindowButtonsColorLightBrush" Color="{StaticResource WindowButtonsColorLight}" />
+    
     <Color x:Key="BackgroundLight">#efefef</Color>
     <SolidColorBrush x:Key="BackgroundLightBrush" Color="{StaticResource BackgroundLight}" />
 

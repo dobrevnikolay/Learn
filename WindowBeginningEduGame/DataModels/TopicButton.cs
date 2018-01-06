@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿
+using System;
+using System.Windows.Input;
 
 namespace WindowBeginningEduGame
 {
-    public class TopicButton : Button
+    public class TopicButton : BaseViewModel
     {
         #region Public Properties
 
@@ -21,14 +18,37 @@ namespace WindowBeginningEduGame
         /// </summary>
         public string TopicName { get; set; }
 
+        /// <summary>
+        /// If it is false that means that it has been already answered or there is no
+        /// data for it in the DB
+        /// </summary>
+        public bool IsAvailable { get; set; } = true;
+
+        public TopicQuestions Questions { get; }
+
+        #endregion
+
+        #region Public Commands
+
+        /// <summary>
+        /// Opens the current topic
+        /// </summary>
+        public ICommand OpenTheTopic { get; set; }
+
         #endregion
 
         #region Constructor
 
-        public TopicButton(string path, string topicName )
+        public TopicButton()
         {
-            PathToPicture = path;
-            TopicName = topicName;
+            //read Questions from DB
+
+            OpenTheTopic = new RelayCommand(OpenEduTopic);
+        }
+
+        private void OpenEduTopic()
+        {
+            
         }
 
         #endregion

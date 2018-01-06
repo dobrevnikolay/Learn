@@ -96,7 +96,7 @@ namespace WindowBeginningEduGame
         
         public async Task Register(object parameter)
         {
-            //Check by regex if the input is valid email adress
+            //Check with regex if the input is valid email adress
             //  Check if the following mail is not registered yet
             //      if it is: The following email has been already registered
             //          please try to enter with it by selecting the option below: 
