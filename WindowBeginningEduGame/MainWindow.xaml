@@ -92,6 +92,8 @@
     </WindowChrome.WindowChrome>
 
     <Grid Background="{StaticResource ForegroundLightBrush}">
-        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" />
+        <Frame x:Name="MainFrame" 
+               Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" 
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

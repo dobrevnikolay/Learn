@@ -26,6 +26,11 @@ namespace WindowBeginningEduGame
         /// </summary>
         private int mWindowsRadius = 10;
 
+        /// <summary>
+        /// The application page
+        /// </summary>
+        private ApplicationPage applicationPage = ApplicationPage.Login;
+
         #endregion
 
         #region Commands
@@ -113,8 +118,20 @@ namespace WindowBeginningEduGame
 
         public GridLength TitleHightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
-        public static ApplicationPage CurrentPage { get; set; } = ApplicationPage.MenuPage;
+        //public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
 
+        public ApplicationPage CurrentPage
+        {
+            get
+            {
+                return this.applicationPage;
+            }
+            set
+            {
+                this.applicationPage = value;
+                this.OnPropertyChanged();
+            }
+        }
         #endregion
 
         #region Constructor

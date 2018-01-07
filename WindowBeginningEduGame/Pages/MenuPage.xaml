@@ -33,24 +33,11 @@
 
                         <Button Style="{StaticResource IconGrowButton}" Content="{StaticResource AwesomeFontUser}"/>
 
-
-                        <!-- User's email -->
-                        <!--<TextBlock FontFamily="{StaticResource LatoRegular}" 
-                               FontSize="{StaticResource FontSizeRegular}" 
-                               Margin="5 10 5 0" 
-                               Foreground="{StaticResource ForegroundLightBrush}"
-                               Text="user: "/>
-                        --><!-- User's answered topics so far --><!--
-                        <TextBlock FontFamily="{StaticResource LatoRegular}" 
-                               FontSize="{StaticResource FontSizeRegular}" 
-                               Margin="5 2 5 5"
-                               Foreground="{StaticResource ForegroundLightBrush}"
-                               Text="Answered Topics: "/>-->
                     </StackPanel>
                     
                     <!-- Available topics -->
 
-                    <local:TopicMenu Grid.Column="1"/>
+                    <local:Question Grid.Column="1"/>
 
 
                     <!-- Options -->

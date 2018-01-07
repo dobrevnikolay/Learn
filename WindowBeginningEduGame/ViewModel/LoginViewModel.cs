@@ -23,7 +23,7 @@ namespace WindowBeginningEduGame
         /// <summary>
         /// The command to login
         /// </summary>
-        
+
         public ICommand RegistrationCommand { get; set; }
 
         public ICommand LoginCommand { get; set; }
@@ -80,6 +80,7 @@ namespace WindowBeginningEduGame
 
 
 
+
             //for Test purposes, do not store the unsecure password into variable
             var pass = (parameter as IHavePassword).SecurePassword.Unsecure();
 
@@ -112,7 +113,7 @@ namespace WindowBeginningEduGame
                 }
                 else
                 {
-                    await Task.Delay(5000);
+                    await Task.Delay(1000);
 
                     //for Test purposes, do not store the unsecure password into variable
                     var pass = (parameter as IHavePassword).SecurePassword.Unsecure();
@@ -128,11 +129,8 @@ namespace WindowBeginningEduGame
             {
                 LoginIsRunning = false;
             }
-            //ApplicationViewModel.GoToPage, to be understood
-            WindowViewModel.CurrentPage = ApplicationPage.MenuPage;
-
-            OnPropertyChanged(nameof(ApplicationPage.MenuPage));
-
+            
+            ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.MenuPage;
         }
     }
 }

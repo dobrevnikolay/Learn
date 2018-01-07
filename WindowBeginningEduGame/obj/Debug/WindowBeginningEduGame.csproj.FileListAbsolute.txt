@@ -58,3 +58,7 @@ C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginn
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.exe
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.pdb
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.csprojResolveAssemblyReference.cache
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\Reading.g.cs
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\Reading.baml
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\Question.g.cs
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\Question.baml

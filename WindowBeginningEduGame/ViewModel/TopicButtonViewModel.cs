@@ -1,30 +1,33 @@
 ﻿
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Windows.Input;
 
 namespace WindowBeginningEduGame
 {
-    public class TopicButton : BaseViewModel
+    public class TopicButtonViewModel : BaseViewModel
     {
         #region Public Properties
+        [BsonId]
+        public ObjectId Id { get; set; }
 
         /// <summary>
         /// Path to the background picture
         /// </summary>
-        public string PathToPicture { get; set; }
+        public string ImagePath { get; set; }
 
         /// <summary>
         /// Topic Name, which will be retrieved from the DB
         /// </summary>
-        public string TopicName { get; set; }
+        public string Topic { get; set; }
 
         /// <summary>
         /// If it is false that means that it has been already answered or there is no
         /// data for it in the DB
         /// </summary>
+        [BsonIgnore]
         public bool IsAvailable { get; set; } = true;
-
-        public TopicQuestions Questions { get; }
 
         #endregion
 
@@ -39,7 +42,7 @@ namespace WindowBeginningEduGame
 
         #region Constructor
 
-        public TopicButton()
+        public TopicButtonViewModel()
         {
             //read Questions from DB
 

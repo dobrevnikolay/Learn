@@ -2,6 +2,7 @@
 
 using PropertyChanged;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace WindowBeginningEduGame
 {
@@ -14,15 +15,17 @@ namespace WindowBeginningEduGame
         /// <summary>
         /// The Event that is fired when any child property changes its value
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged = (sender, e) => {};
+        public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
 
         /// <summary>
         /// Call this to fire a <see cref="PropertyChanged"/> event
         /// </summary>
         /// <param name="name"></param>
-        public void OnPropertyChanged(string name)
+        /// CallerMemberName using reflection finds in compile time the name of the
+        /// caller method
+        public void OnPropertyChanged([CallerMemberName]string name = "")
         {
-            PropertyChanged(this, new PropertyChangedEventArgs(name));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
     }

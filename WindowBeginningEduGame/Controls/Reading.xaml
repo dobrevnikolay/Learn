@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WindowBeginningEduGame.Readings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowBeginningEduGame"
+             mc:Ignorable="d" 
+             Width="600"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <Button Grid.Row="0"
+                    Style="{StaticResource TextButton}"
+                    Content="Back to menu"
+                    Foreground="{StaticResource BackgroundLightBrush}"
+                    FontFamily="{StaticResource LatoBold}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0 10 0 10"/>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <TextBlock 
+                       FontFamily="{StaticResource LatoRegular}"
+                       FontSize="{StaticResource FontSizeRegular}"
+                       Foreground="{StaticResource BackgroundLightBrush}"
+                       TextAlignment="Justify"
+                       Text="Our solar system consists of an average star we call the Sun, the planets Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, and Pluto. It includes: the satellites of the planets; numerous comets, asteroids, and meteoroids; and the interplanetary medium. The Sun is the richest source of electromagnetic energy (mostly in the form of heat and light) in the solar system. The Sun's nearest known stellar neighbor is a red dwarf star called Proxima Centauri, at a distance of 4.3 light years away. The whole solar system, together with the local stars visible on a clear night, orbits the center of our home galaxy, a spiral disk of 200 billion stars we call the Milky Way. The Milky Way has two small galaxies orbiting it nearby, which are visible from the southern hemisphere. They are called the Large Magellanic Cloud and the Small Magellanic Cloud. The nearest large galaxy is the Andromeda Galaxy. It is a spiral galaxy like the Milky Way but is 4 times as massive and is 2 million light years away. Our galaxy, one of billions of galaxies known, is traveling through intergalactic space. "
+                       VerticalAlignment="Center"  
+                       TextWrapping="Wrap"
+                       />
+            </ScrollViewer>
+
+            <Button Grid.Row="2"
+                    Style="{StaticResource IconGrowButton}" 
+                    Content="{StaticResource AwesomeFontQuestionMark}"
+                    Foreground="{StaticResource BackgroundLightBrush}"
+                    HorizontalAlignment="Right"
+                    Margin="0 10 0 10"/>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -10,10 +10,10 @@ namespace WindowBeginningEduGame
         /// <summary>
         /// Storing the list of Topics
         /// </summary>
-        protected List<TopicButton> mItems;
+        protected List<TopicButtonViewModel> mItems;
 
 
-        public List<TopicButton> Items
+        public List<TopicButtonViewModel> Items
         {
             get
             {
@@ -33,24 +33,24 @@ namespace WindowBeginningEduGame
         }
 
         #region Constructor
-        public TopicListViewModel() => mItems = new List<TopicButton>
+        public TopicListViewModel() => mItems = new List<TopicButtonViewModel>
             {
-                new TopicButton
+                new TopicButtonViewModel
                 {
-                    TopicName = "Astronomy",
-                    PathToPicture = "/Images/astro.jpg",
+                    Topic = "Astronomy",
+                    ImagePath = "/Images/astro.jpg",
                     IsAvailable = true
                 },
-                new TopicButton
+                new TopicButtonViewModel
                 {
-                    TopicName = "Geography",
-                    PathToPicture = "/Images/geog.jpg",
+                    Topic = "Geography",
+                    ImagePath = "/Images/geog.jpg",
                     IsAvailable = true
                 },
-                new TopicButton
+                new TopicButtonViewModel
                 {
-                    TopicName = "Movies",
-                    PathToPicture = "/Images/movie.jpg",
+                    Topic = "Movies",
+                    ImagePath = "/Images/movie.jpg",
                     IsAvailable = true
                 },
             };

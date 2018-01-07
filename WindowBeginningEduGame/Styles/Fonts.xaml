@@ -34,5 +34,6 @@
     <!-- Special characters from AwesomeFonst -->
     <system:String x:Key="AwesomeFontGearCircle">&#xf085;</system:String>
     <system:String x:Key="AwesomeFontUser">&#xf2bd;</system:String>
+    <system:String x:Key="AwesomeFontQuestionMark">&#xf128;</system:String>
 
 </ResourceDictionary>
