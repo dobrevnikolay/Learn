@@ -15,6 +15,6 @@ namespace WindowBeginningEduGame
 
         public string Question { get; set; }
 
-        public List<AnswerOption> AnswerOptions { get; set; }
+        public List<AnswerOption> Answers { get; set; }
     }
 }

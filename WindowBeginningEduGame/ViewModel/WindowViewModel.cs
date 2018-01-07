@@ -118,8 +118,6 @@ namespace WindowBeginningEduGame
 
         public GridLength TitleHightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
-        //public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
-
         public ApplicationPage CurrentPage
         {
             get

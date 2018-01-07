@@ -37,8 +37,14 @@
                     
                     <!-- Available topics -->
 
-                    <local:Question Grid.Column="1"/>
+                    
+                    <local:QuestionControl Grid.Column="1"/>
 
+                    <!--<Frame Grid.Column="1"
+                        Content="{Binding CurrentControlContext, Converter={local:MenuPageContextConverter}}" 
+                        NavigationUIVisibility="Hidden"/>-->
+
+                    
 
                     <!-- Options -->
                     <StackPanel Grid.Column="2">

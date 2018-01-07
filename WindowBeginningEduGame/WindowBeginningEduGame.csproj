@@ -97,23 +97,27 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AttachedProperties\PasswordBoxProperties.cs" />
-    <Compile Include="Controls\Question.xaml.cs">
-      <DependentUpon>Question.xaml</DependentUpon>
+    <Compile Include="Common\ControlManager.cs" />
+    <Compile Include="Controls\QuestionControl.xaml.cs">
+      <DependentUpon>QuestionControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Reading.xaml.cs">
-      <DependentUpon>Reading.xaml</DependentUpon>
+    <Compile Include="Controls\ReadingControl.xaml.cs">
+      <DependentUpon>ReadingControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TopicMenu.xaml.cs">
-      <DependentUpon>TopicMenu.xaml</DependentUpon>
+    <Compile Include="Controls\TopicMenuControl.xaml.cs">
+      <DependentUpon>TopicMenuControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataModels\AnswerOption.cs" />
-    <Compile Include="DataModels\ApplicationPage.cs" />
-    <Compile Include="DataModels\MongoDB.cs" />
+    <Compile Include="Common\ApplicationPage.cs" />
+    <Compile Include="Common\ControlContext.cs" />
+    <Compile Include="Common\MongoDB.cs" />
     <Compile Include="DataModels\TopicModel.cs" />
     <Compile Include="DataModels\User.cs" />
-    <Compile Include="DataModels\UserCredentiols.cs" />
-    <Compile Include="DataModels\UserQuestionAnswer.cs" />
-    <Compile Include="ViewModel\TopicButtonViewModel.cs" />
+    <Compile Include="DataModels\UserCredentials.cs" />
+    <Compile Include="DataModels\UserToAnsweredQuestionsMapping.cs" />
+    <Compile Include="ValueConverters\MenuPageContextConverter.cs" />
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
+    <Compile Include="ViewModel\MenuPageViewModel.cs" />
     <Compile Include="DataModels\TopicQuestion.cs" />
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
@@ -129,19 +133,18 @@
     <Compile Include="ViewModel\Base\RelayParameterizedCommand.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
-    <Compile Include="ViewModel\QuestionViewModel.cs" />
     <Compile Include="ViewModel\ReadingViewModel.cs" />
-    <Compile Include="ViewModel\TopicListViewModel.cs" />
+    <Compile Include="DataModels\TopicButton.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
-    <Page Include="Controls\Question.xaml">
+    <Page Include="Controls\QuestionControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Reading.xaml">
+    <Page Include="Controls\ReadingControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\TopicMenu.xaml">
+    <Page Include="Controls\TopicMenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

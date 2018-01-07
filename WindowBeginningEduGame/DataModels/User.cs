@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace WindowBeginningEduGame.DataModels
+namespace WindowBeginningEduGame
 {
     public class User
     {

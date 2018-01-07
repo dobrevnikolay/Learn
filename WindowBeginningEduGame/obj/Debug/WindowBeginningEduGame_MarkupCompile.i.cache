@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\App.xaml
-111552325263
+11-1436341569
 
-37547214037
+39-1236756339
 741021114797
-Controls\Question.xaml;Controls\Reading.xaml;Controls\TopicMenu.xaml;MainWindow.xaml;Pages\MenuPage.xaml;Pages\LoginPage.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Colors.xaml;Styles\Buttons.xaml;Styles\Fonts.xaml;
+Controls\QuestionControl.xaml;Controls\ReadingControl.xaml;Controls\TopicMenuControl.xaml;MainWindow.xaml;Pages\MenuPage.xaml;Pages\LoginPage.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Colors.xaml;Styles\Buttons.xaml;Styles\Fonts.xaml;
 
-False
+True
 

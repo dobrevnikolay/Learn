@@ -41,12 +41,20 @@
                         <!-- Password -->
                         <PasswordBox x:Name="PasswordText" Tag="Password"/>
 
-                        <Button x:Name="RegisterButton" Command="{Binding RegistrationCommand}" CommandParameter="{Binding ElementName=Page}" Content="Register" HorizontalAlignment="Center"/>
+                        <Button x:Name="RegisterButton" 
+                                Command="{Binding RegistrationCommand}"
+                                CommandParameter="{Binding ElementName=Page}" 
+                                Content="Register" 
+                                HorizontalAlignment="Center"/>
 
                     </StackPanel>
                 </Border>
 
-                <Button Style="{StaticResource TextButton}" Content="I already have an account" HorizontalAlignment="Center"/>
+                <Button Style="{StaticResource TextButton}" 
+                        Content="I already have an account" 
+                        HorizontalAlignment="Center"
+                        Command="{Binding LoginCommand}"
+                        CommandParameter="{Binding ElementName=Page}"/>
 
             </StackPanel>
 
