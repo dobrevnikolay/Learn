@@ -26,6 +26,7 @@ C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\obj\De
 C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.csprojResolveAssemblyReference.cache
 C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\obj\Debug\Pages\LoginPage.g.cs
 C:\Users\ndobr\source\repos\WindowBeginningEduGame\WindowBeginningEduGame\obj\Debug\Pages\LoginPage.baml
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.csprojResolveAssemblyReference.cache
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\QuestionControl.g.cs
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\ReadingControl.g.cs
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\TopicMenuControl.g.cs
@@ -44,6 +45,7 @@ C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\Microsoft.Wi
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\MongoDB.Bson.dll
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\MongoDB.Driver.Core.dll
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\MongoDB.Driver.dll
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\Ninject.dll
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\PropertyChanged.dll
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\System.Buffers.dll
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
@@ -52,6 +54,7 @@ C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\Microsoft.Wi
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\MongoDB.Bson.xml
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\MongoDB.Driver.xml
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\Ninject.xml
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\bin\Debug\PropertyChanged.xml
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\App.baml
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\Controls\QuestionControl.baml
@@ -71,4 +74,3 @@ C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginn
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.csproj.CoreCompileInputs.cache
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.exe
 C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.pdb
-C:\Users\ndobr\Desktop\Repos\Learn\WindowBeginningEduGame\obj\Debug\WindowBeginningEduGame.csprojResolveAssemblyReference.cache

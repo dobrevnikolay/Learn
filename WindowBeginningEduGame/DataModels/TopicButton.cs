@@ -2,6 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
+using Ninject;
 using System;
 using System.Linq;
 using System.Windows;
@@ -60,11 +61,7 @@ namespace WindowBeginningEduGame
             UserCredentials.CurrentTopic = this.Topic;
             MongoDB.QuestionsCollection.AsQueryable().Where(x => x.Topic == UserCredentials.CurrentTopic).ToList();
 
-
-            //Never do something like this
-
-
-            var dataContext = ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage;
+            IoC.ControlKernel.Get<ControlViewModel>().CurrentControlContext = ControlContext.Reading;
         }
 
         #endregion

@@ -13,7 +13,7 @@ namespace WindowBeginningEduGame
         {
             InitializeComponent();
 
-            this.DataContext = new MainPageViewModel();
+            this.DataContext = new MenuPageViewModel();
         }
     }
 }

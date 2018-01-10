@@ -140,7 +140,8 @@
                             BorderThickness="{TemplateBinding BorderThickness}" 
                             Background="{TemplateBinding Background}" 
                             SnapsToDevicePixels="True">
-                        <TextBlock Text="{TemplateBinding Content}" 
+                        <TextBlock x:Name ="textbl"
+                                   Text="{TemplateBinding Content}" 
                                    Focusable="False" 
                                    FontFamily="{TemplateBinding FontFamily}"
                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
@@ -154,6 +155,7 @@
                                 <Storyboard>
                                     <ColorAnimation To="{StaticResource EduGameOrange}" Duration="0:0:0.4"
                                                    Storyboard.TargetProperty="Foreground.Color"/>
+
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>

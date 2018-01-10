@@ -18,6 +18,7 @@
             <Button Grid.Row="0"
                     Style="{StaticResource TextButton}"
                     Content="Back to menu"
+                    Command ="{Binding BackToMenuCommand}" 
                     Foreground="{StaticResource BackgroundLightBrush}"
                     FontFamily="{StaticResource LatoBold}"
                     HorizontalAlignment="Center"

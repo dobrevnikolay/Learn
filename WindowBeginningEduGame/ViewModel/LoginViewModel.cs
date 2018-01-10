@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using Ninject;
 using System;
 using System.Security;
 using System.Threading.Tasks;
@@ -58,6 +59,11 @@ namespace WindowBeginningEduGame
             LoginCommand = new RelayParameterizedCommand(async (parameter) => await Login(parameter));
         }
 
+
+        #endregion
+
+        #region Login/Register
+
         /// <summary>
         /// Attempts to log the user in
         /// </summary>
@@ -76,7 +82,8 @@ namespace WindowBeginningEduGame
                     UserCredentials.UserId = dbUser.Id;
                     UserCredentials.Username = dbUser.Username;
 
-                    ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.MenuPage;
+                    IoC.ApplicationKernel.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.MenuPage;
+
                 }
                 else
                 {
@@ -106,7 +113,7 @@ namespace WindowBeginningEduGame
             
         }
 
-        #endregion
+       
 
         /// <summary>
         /// Attempts to register the user
@@ -136,34 +143,62 @@ namespace WindowBeginningEduGame
                     var pass = (parameter as IHavePassword).SecurePassword.Unsecure();
                     var username = this.Email;
 
-                    var newUser = new User
+                    RegexUtilities emailChecker = new RegexUtilities();
+
+                    if(emailChecker.IsValidEmail(username))
                     {
-                        Password = pass,
-                        Username = username
-                    };
-
-                    try
-                    {
-                        // Insert user in db
-                        MongoDB.UsersCollection.InsertOne(newUser);
-
-                        // Check if user is successfully inserted
-                        var dbUser = MongoDB.UsersCollection.Find<User>(x => x.Username == username && x.Password == pass).FirstOrDefault();
-
-                        if (dbUser != null)
+                        
+                        try
                         {
-                            MessageBox.Show("User successfully registered.");
-                            ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.MenuPage;
+
+                            //Check if the user is already registred
+                            var dbUser = MongoDB.UsersCollection.Find(x => x.Username == username && x.Password == pass).FirstOrDefault();
+
+                            //the user is already into our database
+                            if(null!= dbUser)
+                            {
+                                UserCredentials.UserId = dbUser.Id;
+                                UserCredentials.Username = dbUser.Username;
+
+                                IoC.ApplicationKernel.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.MenuPage;
+                            }
+                            else
+                            {
+                                var newUser = new User
+                                {
+                                    Password = pass,
+                                    Username = username
+                                };
+
+                                // Insert user in db
+                                MongoDB.UsersCollection.InsertOne(newUser);
+
+                                // Check if user is successfully inserted
+                                dbUser = MongoDB.UsersCollection.Find<User>(x => x.Username == username && x.Password == pass).FirstOrDefault();
+
+                                if (dbUser != null)
+                                {
+                                    MessageBox.Show("User successfully registered.");
+                                    IoC.ApplicationKernel.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.MenuPage;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("User registration failed.");
+                                }
+                            }
+                            
                         }
-                        else
+                        catch (Exception exc)
                         {
                             MessageBox.Show("User registration failed.");
                         }
                     }
-                    catch (Exception exc)
+                    else
                     {
-                        MessageBox.Show("User registration failed.");
+                        MessageBox.Show("Invalid email");
                     }
+
+                    
                 }
             }
             catch
@@ -174,5 +209,8 @@ namespace WindowBeginningEduGame
                 LoginIsRunning = false;
             }
         }
+        #endregion
+
+
     }
 }

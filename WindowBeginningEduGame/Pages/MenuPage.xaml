@@ -36,15 +36,12 @@
                     </StackPanel>
                     
                     <!-- Available topics -->
+                    <Frame Grid.Column="1"
+                        Content="{Binding ControlViewModel.CurrentControlContext, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:MenuPageContextConverter}}"
+                        NavigationUIVisibility="Hidden"/>
 
                     
-                    <local:QuestionControl Grid.Column="1"/>
 
-                    <!--<Frame Grid.Column="1"
-                        Content="{Binding CurrentControlContext, Converter={local:MenuPageContextConverter}}" 
-                        NavigationUIVisibility="Hidden"/>-->
-
-                    
 
                     <!-- Options -->
                     <StackPanel Grid.Column="2">

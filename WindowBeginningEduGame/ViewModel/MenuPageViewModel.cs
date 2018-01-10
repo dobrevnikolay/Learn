@@ -52,36 +52,36 @@ namespace WindowBeginningEduGame
 
             mItems = topics;
 
-            // Example how to insert answered questions
-            var userToAnsweredQuestionsMapping = MongoDB.UserToAnsweredQuestionsMapping.Find(x => x.UserId == UserCredentials.UserId).FirstOrDefault();
-            if (userToAnsweredQuestionsMapping != null)
-            {
-                // The topic question will be taken from the question that the user is answering at the moment.
-                var topicQuestion = new TopicQuestion();
+            //// Example how to insert answered questions
+            //var userToAnsweredQuestionsMapping = MongoDB.UserToAnsweredQuestionsMapping.Find(x => x.UserId == UserCredentials.UserId).FirstOrDefault();
+            //if (userToAnsweredQuestionsMapping != null)
+            //{
+            //    // The topic question will be taken from the question that the user is answering at the moment.
+            //    var topicQuestion = new TopicQuestion();
 
-                var updateDefinition = Builders<UserToAnsweredQuestionsMapping>.Update
-                    .AddToSet<TopicQuestion>(x => x.QuestionsAnsweredCorrectly, topicQuestion);
+            //    var updateDefinition = Builders<UserToAnsweredQuestionsMapping>.Update
+            //        .AddToSet<TopicQuestion>(x => x.QuestionsAnsweredCorrectly, topicQuestion);
 
-                // Find the document and update the array.
-                MongoDB.UserToAnsweredQuestionsMapping.FindOneAndUpdate(
-                    x => x.UserId == UserCredentials.UserId,
-                    updateDefinition);
-            }
-            else
-            {
-                userToAnsweredQuestionsMapping = new UserToAnsweredQuestionsMapping
-                {
-                    UserId = UserCredentials.UserId,
-                    Username = UserCredentials.Username,
-                    QuestionsAnsweredCorrectly = new List<TopicQuestion>
-                    {
-                        // The question that is being answered currently by the user
-                        new TopicQuestion()
-                    }
-                };
+            //    // Find the document and update the array.
+            //    MongoDB.UserToAnsweredQuestionsMapping.FindOneAndUpdate(
+            //        x => x.UserId == UserCredentials.UserId,
+            //        updateDefinition);
+            //}
+            //else
+            //{
+            //    userToAnsweredQuestionsMapping = new UserToAnsweredQuestionsMapping
+            //    {
+            //        UserId = UserCredentials.UserId,
+            //        Username = UserCredentials.Username,
+            //        QuestionsAnsweredCorrectly = new List<TopicQuestion>
+            //        {
+            //            // The question that is being answered currently by the user
+            //            new TopicQuestion()
+            //        }
+            //    };
 
-                MongoDB.UserToAnsweredQuestionsMapping.InsertOne(userToAnsweredQuestionsMapping);
-            }
+            //    MongoDB.UserToAnsweredQuestionsMapping.InsertOne(userToAnsweredQuestionsMapping);
+            //}
         }
 
         #endregion

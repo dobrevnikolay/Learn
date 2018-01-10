@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ninject;
+using System;
+using System.Windows;
 using System.Windows.Input;
 
 namespace WindowBeginningEduGame
@@ -35,10 +37,15 @@ namespace WindowBeginningEduGame
         private void ProcessTheAnswer()
         {
            if(IsCorrect)
-            {
-                //Indicates the topic as complete
+           {
+                //ToDo: Indicates the topic as complete
+                MessageBox.Show("Correct Answer!");
+           }
+           else
+           {
+                MessageBox.Show("Incorrect Answer! You could try again!");
             }
-           //Go to main menu
+            IoC.ControlKernel.Get<ControlViewModel>().CurrentControlContext = ControlContext.TopicMenu;
         }
         #endregion
     }
