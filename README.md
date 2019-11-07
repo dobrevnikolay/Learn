@@ -5,7 +5,7 @@
 Learn is a educational game application. Its idea is to provide facts and ask questions
 related to them afterwards.
 
-The application is Alfa version. Consequetly it is build only with demo purposes.
+The application is Alfa version. Consequetly it is build only for demo purposes.
 
 ## Implementation
 
